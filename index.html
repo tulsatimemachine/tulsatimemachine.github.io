@@ -140,7 +140,14 @@ a:active {
     <script type="module">
       import Webamp from "https://unpkg.com/webamp@^2";
       const webamp = new Webamp({});
-
+	    initialTracks: [
+    {url: "/media/paranoidandroid.mp3",
+      metaData: {
+        artist: "radiohead",
+        title: "paranoid android",
+      },
+      duration: 387, // Track duration in seconds
+    }
       // Returns a promise indicating when it's done loading.
       webamp.renderWhenReady(document.getElementById("app"));
     </script>
